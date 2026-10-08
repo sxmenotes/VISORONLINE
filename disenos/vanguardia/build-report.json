@@ -1,0 +1,22 @@
+{
+  "design": "vanguardia",
+  "plan": "gold",
+  "mode": "demo",
+  "active": {
+    "sobre": true,
+    "portada": true,
+    "cuentaRegresiva": true,
+    "agenda": true,
+    "ubicaciones": true,
+    "historia": true,
+    "galeria": true,
+    "spotify": true,
+    "instagram": true,
+    "regalos": true,
+    "recomendaciones": true,
+    "confirmacion": true,
+    "preguntas": true,
+    "musicaFondo": true,
+    "gestionInvitados": true
+  }
+}
