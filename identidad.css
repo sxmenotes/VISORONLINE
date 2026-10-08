@@ -1,0 +1,19 @@
+/* Click! Acepto · sistema editorial compartido. No se carga en las invitaciones. */
+:root{--brand-ink:#4b1830;--brand-paper:#fff9f2;--brand-petal:#f1c9cb;--brand-vanilla:#f5e9b9;--brand-muted:#765967;--brand-line:#dfcbd0;--brand-accent:#8e3555;--brand-serif:Baskerville,'Baskerville Old Face','Palatino Linotype',Georgia,serif;--brand-sans:Futura,'Century Gothic',Arial,sans-serif;--ink:var(--brand-ink);--muted:var(--brand-muted);--line:var(--brand-line);--paper:var(--brand-paper);--bg:var(--brand-paper);--surface:#fffdfa;--green:var(--brand-ink);--pale:#f7e9e9;--gold:var(--brand-accent);--orange:var(--brand-accent);font-family:var(--brand-sans);color:var(--brand-ink);background:var(--brand-paper)}
+body{font-family:var(--brand-sans)}button,input,textarea,select{font-family:var(--brand-sans)}
+.brand-logo{width:260px;height:auto;display:block;max-width:100%}.brand{flex-shrink:0}
+h1,h2,h3,.dashboard-hero h1,.dialog-top h2,.design-desc strong,.plan-option strong,.intro h1,.intro-note>p:first-of-type,.collection-heading h2,.card-heading h3,.selection h2,.outro h2{font-family:var(--brand-serif);font-weight:400}
+.dashboard-hero h1{letter-spacing:-1.5px}.intro h1{font-size:clamp(58px,7.2vw,118px);line-height:1.04;letter-spacing:-2.5px}.intro h1 em{color:var(--brand-accent)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--brand-accent);outline-offset:4px}
+.app-header,.site-header{background:var(--brand-paper);border-color:var(--brand-line)}
+.studio-footer{border-color:var(--brand-line);color:var(--brand-muted)}
+.btn.primary,.toast{background:var(--brand-ink);color:var(--brand-paper)}.btn.primary:hover{background:#682540}
+.btn.secondary,.btn.ghost,.icon-btn{color:var(--brand-ink);border-color:var(--brand-line)}
+.nav-item.active,.repeat-card,.design-desc,.destination,.plan-summary,.plan-option,.design-option{background:#f7e9e9}.nav-item.active,.wizard-steps .active{color:var(--brand-ink)}
+.design-option.selected,.plan-option.selected{border-color:var(--brand-accent);box-shadow:0 0 0 2px var(--brand-petal)}
+.plan-option.selected{background:#f7e9e9}.design-option .design-desc small,.plan-option small,.plan-option ul,.preview-toolbar>span,.preview-bottom,.wizard-steps{color:var(--brand-muted)}
+.preview-panel{background:#efe1e5}.preview-toolbar{border-color:var(--brand-line)}.segmented{background:#e3cfd6}.segmented button.active{background:var(--brand-paper)}
+.local-badge{color:var(--brand-ink);border-color:var(--brand-line)}.local-badge i{background:var(--brand-accent)}.header-caption,.hero-note{color:var(--brand-muted)}
+.toast.error{background:#843c30}.new-client{border-color:var(--brand-line);background:#f7e9e9}
+dialog{border-color:var(--brand-line)}dialog::backdrop{background:#31142088}.selection{background:var(--brand-vanilla)}.favorites-link span{background:var(--brand-petal)}
+@media(max-width:600px){.brand-logo{width:190px}.intro h1{font-size:clamp(48px,12vw,72px);letter-spacing:-1.5px}.app-header{gap:12px}}@media(max-width:360px){.brand-logo{width:165px}}

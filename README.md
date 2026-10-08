@@ -1,4 +1,4 @@
-# Atelier · Selector de diseños
+# Click! Acepto · Selector de diseños
 
 Sitio estático independiente con ocho demos de Clara y Mateo. Abre index.html para explorar el catálogo; también funciona servido por HTTP. No contiene clientes reales, contraseñas, servidor del editor ni base de datos.
 
