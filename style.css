@@ -15,3 +15,22 @@ body{font-size:16px}.eyebrow{font-size:12px;letter-spacing:1.6px}.announcement{f
 
 /* Consulta previa a WhatsApp. */
 .contact-form{max-width:780px;margin:36px auto 0;text-align:left}.contact-fields{display:grid;grid-template-columns:1fr 1fr;gap:22px}.contact-form label{display:block;font-size:16px;line-height:1.5;margin-bottom:22px}.contact-form label>span{font-size:14px;color:var(--petal)}.contact-form input,.contact-form select,.contact-form textarea{display:block;width:100%;margin-top:9px;border:1px solid #dfcfc9;border-radius:3px;padding:14px;background:var(--paper);color:var(--ink);font:16px/1.5 var(--sans)}.contact-form textarea{resize:vertical;min-height:125px}.contact-form :is(input,select,textarea):focus-visible{outline:3px solid var(--petal);outline-offset:4px}.contact-form .contact-privacy{font-size:13px!important;line-height:1.7}.contact-form>.button{display:flex;margin:25px auto 16px}.contact-form>small{text-align:center}.contact-form button:disabled{opacity:.55;cursor:not-allowed}@media(max-width:700px){.contact-fields{grid-template-columns:1fr;gap:0}.contact-form>.button{width:100%;justify-content:center}}
+
+/* Móvil: navegación accesible y lectura sin saltos de composición. */
+@media(max-width:700px){
+ html{scroll-padding-top:100px}
+ .header{position:sticky;top:0;z-index:30;background:var(--paper);padding-top:12px;padding-bottom:12px;min-height:74px}
+ .header.enhanced nav.open{position:absolute;top:100%;left:0;right:0;width:auto;margin:0;padding:12px 6% 20px;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 15px 25px #4b183012;max-height:calc(100dvh - 90px);overflow-y:auto}
+ .header.enhanced nav.open a{min-height:48px;display:flex;align-items:center}
+ .menu-button:not([hidden]){min-height:48px;align-items:center}
+ .hero{padding-top:32px;gap:24px}.hero h1{font-size:clamp(48px,12vw,72px);line-height:1.05;margin:20px 0 24px}.hero h1 br:nth-of-type(2){display:initial}
+ .hero-actions{gap:12px;margin-top:24px}.hero-actions>.button{width:100%;justify-content:center}.text-link{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+ .hero-note{margin-top:20px}.hero-art{margin-top:4px}
+ .preview-controls button{flex-shrink:0}.preview-controls span{min-width:0;flex:1;max-width:190px}
+ .preview-track .sample-top{letter-spacing:1px}.preview-track .sample strong{font-size:clamp(39px,12vw,48px)}
+ .collection-cta .button{text-align:center}.contact h2{font-size:clamp(42px,11vw,62px)}
+ .contact-form label{font-size:15px}.contact-form input,.contact-form select,.contact-form textarea{min-width:0;max-width:100%;min-height:52px}
+ .contact-fields{min-width:0}.contact-form .button{min-height:56px;text-align:center;white-space:normal}
+ .footer>a:last-of-type,.footer-bottom a{display:inline-flex;min-height:44px;align-items:center}
+ .footer{padding-bottom:max(24px,env(safe-area-inset-bottom))}
+}

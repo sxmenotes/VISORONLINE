@@ -18,3 +18,14 @@ Revisión de esta web promocional. No se modifican planes comerciales, datos rea
 - `npm test`: 19 pruebas aprobadas. `npm run build`: correcto.
 - Comprobación adicional con DOM simulado: ocho diseños, recorrido hasta ambos extremos, flechas de teclado, menú y cierre con Escape; recursos locales presentes. Funcionamiento sin GSAP verificado en esta prueba.
 - Revisión visual final en escritorio y móvil pendiente: la sesión de Safari cambió de pestaña durante la comprobación. Las pruebas de DOM no sustituyen la revisión del renderizado.
+
+## Mejora móvil — octubre 2026
+
+- Corregido el salto de línea que unía «primer» con «gran» en la portada.
+- Corregida la cuadrícula heredada que estrechaba el párrafo introductorio de la colección.
+- Cabecera principal persistente y menú desplegable superpuesto, con cierre al elegir enlace, tocar fuera o pulsar Escape.
+- Botones y enlaces de navegación con áreas táctiles mayores; controles de cerrar, favoritos y siguiente/anterior ampliados.
+- Formulario con campos de una columna, etiquetas más breves, controles amplios y CTA completo.
+- Acceso al visor integrado en la misma pestaña; ajuste del iframe al cargar y al cambiar el viewport visual.
+- Revisión real en Chromium a 320, 390 y 430 px: sin desbordamiento horizontal; menú, selección de plan y formulario comprobados sin enviar mensajes. Vista previa, cambio de diseño y enlace de consulta comprobados a 390 px.
+- Inspección visual de portada, colección, formulario y vista previa. Esta revisión sustituye el pendiente visual anterior para esas vistas móviles; no representa una prueba en dispositivos físicos.
