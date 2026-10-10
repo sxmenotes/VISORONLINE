@@ -58,7 +58,7 @@ export async function build({ env = process.env, out = join(root, 'dist') } = {}
   let collection = await readFile(join(root, 'coleccion/index.html'), 'utf8');
   collection = collection.replace(/<meta\s+(?:name="(?:description|robots)"|property="og:[^"]+")[^>]*>/g, '');
   const collectionTitle = 'Colección de invitaciones de boda | Click! Acepto';
-  const collectionDescription = 'Exploren ocho diseños de invitaciones digitales de boda. Comparen estilos, guarden favoritos y descubran las demos completas de Click! Acepto.';
+  const collectionDescription = 'Exploren ocho diseños de invitaciones digitales de boda. Encuentren su estilo y abran las demos completas de Click! Acepto.';
   const collectionMeta = metadata.filter(tag => !tag.includes('application/ld+json')).map(tag => tag.replaceAll(title, collectionTitle).replaceAll(description, collectionDescription).replace(`href="${escape(url)}"`, `href="${escape(url)}coleccion/"`).replace(`property="og:url" content="${escape(url)}"`, `property="og:url" content="${escape(url)}coleccion/"`));
   collection = collection.replace(/<title>.*?<\/title>/s, `<title>${collectionTitle}</title>`).replace('</head>', collectionMeta.join('\n') + '</head>');
   await writeFile(join(out, 'coleccion/index.html'), collection);

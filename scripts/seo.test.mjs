@@ -32,13 +32,13 @@ test('colección integrada: canonical, ocho demos locales y muestras noindex', a
  const out=await directory();await build({env,out});
  const html=await readFile(join(out,'coleccion/index.html'),'utf8');
  assert.match(html,/rel="canonical" href="https:\/\/example.com\/coleccion\/"/);
- const catalog=JSON.parse(html.match(/<script id="design-data" type="application\/json">(.*?)<\/script>/s)[1]);
+ const catalog=[...html.matchAll(/class="design-card" id="diseno-([^"]+)"/g)].map(match=>({id:match[1]}));
  assert.equal(catalog.length,8);
  for(const design of catalog) for(const page of ['index.html','vista.html']) {
   const demo=await readFile(join(out,'coleccion/disenos',design.id,page),'utf8');
   assert.match(demo,/name="robots" content="noindex, follow"/);
  }
- assert.match(html,/href="..\/index.html#contacto"/);
+ assert.match(html,/href="..\/index.html"/);
 });
 test('verificación de Search Console escapada como atributo', async () => {
  const out=await directory();await build({env:{...env,GOOGLE_SITE_VERIFICATION:'code"<test>'},out});
