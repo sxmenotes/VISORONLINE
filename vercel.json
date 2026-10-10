@@ -1,7 +1,10 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "buildCommand": null,
-  "outputDirectory": ".",
+  "installCommand": "echo 'Sitio sin dependencias externas'",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": false,
   "headers": [
     {
       "source": "/(.*)",
@@ -12,11 +15,16 @@
         },
         {
           "key": "Referrer-Policy",
-          "value": "no-referrer"
-        },
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/404",
+      "headers": [
         {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
+          "key": "X-Robots-Tag",
+          "value": "noindex"
         }
       ]
     }

@@ -1,19 +1,23 @@
-# Click! Acepto · Selector de diseños
+# Click! Acepto — Web de servicios
 
-Sitio estático independiente con ocho demos de Clara y Mateo. Abre index.html para explorar el catálogo; también funciona servido por HTTP. No contiene clientes reales, contraseñas, servidor del editor ni base de datos.
+Página estática independiente. Abrir `index.html` para previsualizarla. HTML, CSS, JavaScript, fotografías y marca están dentro de esta carpeta; no requiere instalación para revisar el diseño. La entrega para Vercel se genera con `npm run build` (Node.js 24, sin dependencias externas).
 
-## Publicarlo
+Secciones: portada, adelanto dinámico de ocho diseños, beneficios, proceso, planes, preguntas frecuentes y contacto por WhatsApp. El menú móvil y los controles del adelanto se mejoran con JavaScript; los contenidos, preguntas y enlaces de navegación funcionan también sin él. El formulario de consulta requiere JavaScript para preparar el mensaje de WhatsApp.
 
-1. Sube el contenido de esta carpeta a un repositorio propio en GitHub.
-2. Impórtalo en Vercel con Framework Other, sin comando de build y directorio de salida punto (.). La configuración ya está en vercel.json.
-3. Publica y revisa la URL final en móvil y PC. No requiere variables de entorno. Referencia: https://vercel.com/docs/project-configuration/vercel-json
+Se conserva el WhatsApp existente. La colección se encuentra en `coleccion/index.html`, dentro de esta misma web. Antes de publicar, comprobar que ambos sean los destinos deseados. Los botones de contacto llevan primero al formulario: nombres y plan obligatorios, diseño y comentarios opcionales. Al continuar se abre WhatsApp con el mensaje preparado; no se envía automáticamente. El sitio no almacena los datos del formulario ni los envía a un servidor propio. No incorpora analíticas.
 
-El visor permite explorar, filtrar, guardar favoritos en el navegador y copiar la elección. No envía mensajes ni registra solicitudes. No solicita datos personales. Los favoritos solo se conservan en ese navegador si permite almacenamiento local. Las fuentes y enlaces de terceros necesitan Internet.
+Planes: prestaciones de `atelier/sistema/planes.json`. Precios en pesos chilenos: Clásica $40.000 CLP, Platino $55.000 CLP y Gold $70.000 CLP, confirmados por el propietario.
 
-Las demos muestran las secciones de Gold como referencia visual; el diseño se elige independientemente del plan contratado. Los datos y las confirmaciones son ficticios.
+Solo se incluyen recursos de demostración; no hay datos de clientes. Las tarjetas enlazan a la colección integrada, con filtros, favoritos y ocho demos. Ver `ATRIBUCIONES.md`.
 
-Los ocho sitios están en disenos/<nombre>/. index.html incluye el sobre; vista.html entra directamente al contenido para el visor. Fotos, música y GSAP se incluyen localmente.
+Las fuentes del sistema usan Baskerville/Georgia y Futura/Arial como alternativas. El logotipo usa trazados y conserva su apariencia en cualquier dispositivo.
 
-Regenerar desde el workspace: npm run visor. Fuente de diseños: atelier/coleccion/. Fuente del visor: atelier/sistema/visor/. No editar esta salida a mano.
+Esta reconstrucción no publica ni cambia el sitio remoto. Para desplegar, usar únicamente esta carpeta como sitio estático.
 
-Consulta ATRIBUCIONES.md para las fotografías y recursos originales.
+Movimiento con GSAP y ScrollTrigger locales en `assets/vendor/`, con sus avisos de licencia originales. Respeta movimiento reducido y mantiene contenido disponible sin JavaScript. Ver `AUDITORIA-DISENO.md` para las mejoras de lectura y composición.
+
+## Publicar y aparecer en Google
+
+Consultar [PUBLICAR-Y-SEO.md](PUBLICAR-Y-SEO.md). Incluye la configuración de GitHub/Vercel, la colección integrada y los pasos de Search Console. `npm run build` genera `dist/index.html`, `dist/robots.txt` y `dist/sitemap.xml` con las URLs definitivas. `npm test` comprueba los metadatos, previews y validaciones.
+
+Para regenerar la colección desde el workspace completo: `npm run coleccion:web`. Publicar todo `web/` en un único repositorio/proyecto; no requiere `VISOR_URL`.

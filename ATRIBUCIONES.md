@@ -1,22 +1,12 @@
-# Atribuciones de las demos
+# Créditos de fotografía
 
-## Fotografía
+Las imágenes de esta web provienen de los recursos de demostración de la colección. No corresponden a clientes ni constituyen testimonios.
 
-Soulseeker – Creative Photography / Unsplash.
-https://unsplash.com/photos/wedding-archway-with-white-flowers-aRQrz0fclB8
-Licencia: https://unsplash.com/license
+- Soulseeker – Creative Photography: https://unsplash.com/photos/wedding-archway-with-white-flowers-aRQrz0fclB8
+- Créditos de la galería original: Céline Druguet (https://unsplash.com/photos/Rnton6rhDe4), Jan Jirásek (https://unsplash.com/photos/q5YnuVLa5gk) y Marius Muresan (https://unsplash.com/photos/VaeVQXvunDw).
 
-## Ampliación del prototipo
+Licencia de fotografía: https://unsplash.com/license
 
-Tres lugares ficticios (civil 11:00, iglesia 17:00, recepción 18:30), galería ampliable, música instrumental original sintetizada localmente en assets/nuestro-si.wav con reproducción voluntaria y botón de silencio, reproductor Spotify bajo demanda y tarjetas de regalos. No se aceptan pagos; banco, alias y CBU son ficticios. El enlace Spotify es una playlist pública de Topsify Spain y puede reemplazarse en index.html y app.js.
+Identidad visual: Click! Acepto — by Kintu, recursos del proyecto. Los logos SVG contienen trazados; no se distribuyen archivos de fuentes.
 
-Fotos de galería bajo Unsplash License:
-- Céline Druguet: https://unsplash.com/photos/Rnton6rhDe4
-- Jan Jirásek: https://unsplash.com/photos/q5YnuVLa5gk
-- Marius Muresan: https://unsplash.com/photos/VaeVQXvunDw
-
-## Animaciones GSAP
-
-GSAP 3.14.2 y ScrollTrigger se sirven desde `disenos/<diseño>/assets/vendor` (avisos de licencia incluidos en los archivos). `animations.js` controla las entradas al desplazar la página mediante matchMedia; `welcome.js` controla la secuencia de apertura del sobre. Se respeta `prefers-reduced-motion`, incluidos cambios durante la apertura. Sin las librerías se conserva la animación CSS; sin JavaScript se muestra directamente la invitación.
-
-Documentación: https://gsap.com/docs/v3/GSAP/gsap.matchMedia()/ y https://gsap.com/docs/v3/Plugins/ScrollTrigger/
+GSAP y ScrollTrigger: archivos locales en `assets/vendor/`, con los avisos de licencia originales conservados.
