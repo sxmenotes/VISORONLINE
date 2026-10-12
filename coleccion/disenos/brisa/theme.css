@@ -1,0 +1,53 @@
+:root{--paper:#edf6fb;--ink:#234b66;--green:#234b66;--muted:#4a6879;--line:#9dbbcb;--surface:#fff;--button-ink:#fff;--envelope:#b9dceb;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Manrope',Arial,sans-serif}
+
+/* Shared components inherit this design's palette; commercial modules remain controlled by the renderer. */
+body{background:var(--paper);color:var(--ink)}
+h1,h2,h3{overflow-wrap:anywhere}h2 em,.hero h1 em{color:var(--green)}
+header{border-color:var(--line)}.hero-message,.discover,.section-heading>p,.timeline article>p:not(.time),.section-description,.demo-label,.form-note,.rsvp>div>p:not(.eyebrow),.recommendation-description{color:var(--muted)}
+.button{background:var(--green);border-color:var(--green);color:var(--button-ink)}.button:hover{background:var(--ink);color:var(--paper)}.text-button{color:var(--green);border-color:var(--line)}
+.day,.intro,.gifts,.gallery,.faq{background:var(--paper)}.venues,.music-section,.recommendations,.rsvp,.social-section{background:var(--surface)}
+.timeline,.timeline article+article,.gift-card,.recommendation-card,.faq details,.travel-tip{border-color:var(--line)}.event-number{background:var(--paper);color:var(--green)}
+.venue-card,.venue-card:nth-child(2),.venue-card:nth-child(3){background:var(--paper);color:var(--ink);border:1px solid var(--line);outline:none}
+.venue-card p,.venue-card .venue-time,.guest-details p,.guest-details article>span{color:var(--muted)}.venue-card h3 em{color:var(--green)}
+.light,.venue-card .light{background:var(--green);color:var(--button-ink);border-color:var(--green)}
+.gift-card{background:var(--surface)}.gift-card dl>div{border-color:var(--line)}.gift-card .demo-warning,.recommendation-type,.recommendation-tag{color:var(--muted)}
+.gallery-photo{color:var(--ink)}.playlist-panel{background:var(--green);color:var(--button-ink);outline:none}.playlist-panel>p:not(.eyebrow){color:inherit}
+input:not([type=radio]),textarea,select{background:var(--paper);color:var(--ink);border-color:var(--line)}#form-status{background:var(--paper);color:var(--ink)}
+footer{background:var(--paper);color:var(--ink);border-color:var(--line)}footer small,footer>div{color:var(--muted)}
+.music-toggle{background:var(--paper);color:var(--ink);border-color:var(--line)}.music-toggle[aria-pressed=true]{background:var(--green);color:var(--button-ink)}
+dialog{background:var(--paper);color:var(--ink)}.close-photo{background:var(--paper);color:var(--ink)}
+.welcome{background:var(--paper);color:var(--ink)}.welcome h1 em,.welcome-signature span{color:var(--green)}.welcome:before{border-color:var(--line)}.welcome-intro,.welcome-signature,.open-hint{color:var(--muted)}.open-label{color:var(--ink);border-color:var(--line)}.envelope-letter{background:var(--paper);color:var(--ink)}.envelope-seal{background:var(--green);color:var(--button-ink)}
+.envelope-back,.envelope-front,.envelope-front:after,.envelope-flap{background:var(--envelope)}.letter-names i{color:var(--green)}
+@media(max-width:740px){.hero h1{font-size:clamp(60px,17vw,100px);overflow-wrap:anywhere}.hero-copy{min-width:0}.countdown{gap:12px}.countdown div{min-width:45px}.countdown strong{font-size:40px}.section-heading{flex-wrap:wrap}.timeline,.venue-grid{grid-template-columns:1fr}.timeline article+article{border-left:0}.hero-art{max-width:100%}}
+
+/* BRISA · una postal abierta al cielo, con fotografía panorámica. */
+header{max-width:1440px;border-bottom:1px solid var(--line);height:86px}.monogram{font-style:italic}
+.hero{max-width:1400px;display:flex;flex-direction:column;min-height:0;padding:52px 6% 64px;gap:36px}
+.hero-copy{padding:0;display:grid;grid-template-columns:1.3fr 1fr;gap:14px 9%;width:100%;text-align:left;align-items:start}
+.hero .eyebrow{grid-column:1/-1;font-size:11px;letter-spacing:2px}
+.hero h1{grid-column:1;grid-row:2/8;font-size:clamp(86px,10vw,145px);font-weight:400;letter-spacing:-5px;line-height:.95;margin:8px 0 0}
+.hero h1 em{font-style:italic;font-size:.65em}.hero-rule{display:none}.hero-announcement{font-size:32px;margin-top:12px}
+.hero-message{margin:0;font-size:15px;max-width:410px}.hero-date{margin-top:10px;font-size:13px;letter-spacing:1.6px}.hero-location{margin:0;font-size:11px}
+.hero .button{justify-self:start;border-radius:100px;padding:14px 28px}.discover{margin:0}
+.hero-art{margin:0;width:100%;min-height:360px;border-radius:180px 180px 8px 8px;background:#b9dceb}
+.hero-art img{filter:saturate(.65)}.photo-shade{background:linear-gradient(0deg,#173b5680,transparent 75%)}
+.photo-caption{font-style:italic;text-align:center;font-size:40px;left:8%;right:8%;bottom:32px}.photo-frame,.photo-top,.photo-bottom,.seal{display:none}
+.section{border-top:1px solid var(--line)}.intro{background:var(--surface)}.intro h2{max-width:850px;margin:20px auto}
+.countdown{gap:22px}.countdown div{background:var(--paper);border-radius:50px;padding:20px 16px;min-width:95px}.countdown b{display:none}
+.timeline{border:0;gap:26px}.timeline article,.timeline article+article{border:0;border-top:1px solid var(--line);padding:32px 0 0}
+.event-number{position:static;display:block;font-style:italic;font:30px var(--serif);padding:0;margin-bottom:15px;background:transparent}
+.venue-card:nth-child(n){border-radius:100px 100px 8px 8px;text-align:center;align-items:center;padding:52px 28px 32px;background:var(--paper)}
+.venue-card h3{font-size:36px}.gift-card{border-radius:24px}.recommendation-card{border-top:1px solid var(--line)}
+.gallery-grid{gap:24px}.gallery-photo img,.gallery-photo:nth-child(2) img{height:320px;border-radius:8px;filter:saturate(.7)}
+.playlist-panel{border-radius:100px 100px 10px 10px}.playlist-panel:has(iframe){border-radius:10px}
+.welcome{background:radial-gradient(ellipse at top,#fff 0%,var(--paper) 70%)}.welcome:before{border:1px solid var(--line);border-radius:180px 180px 0 0;inset:20px}
+.welcome h1 em{font-style:italic}.envelope-seal{background:var(--green);outline-color:var(--line)}
+.music-toggle{border-radius:100px}
+@media(max-width:740px){
+ header{height:76px}.hero{padding:38px 6% 34px;gap:26px}.hero-copy{display:block;text-align:center}
+ .hero h1{font-size:clamp(68px,20vw,108px);letter-spacing:-3px;margin:26px 0}.hero-announcement{font-size:28px}
+ .hero-message{margin:14px auto 22px;max-width:400px;font-size:14px}.hero-date{font-size:12px}.hero-location{margin:10px 0 22px}.discover{margin-top:20px}
+ .hero-art{min-height:260px;border-radius:110px 110px 8px 8px}.photo-caption{font-size:28px;bottom:26px}
+ .section{padding:60px 7%}.countdown{gap:8px}.countdown div{min-width:0;flex:1;max-width:85px;padding:15px 5px}.countdown strong{font-size:36px}.countdown span{font-size:8px;letter-spacing:.5px}
+ .gallery-photo img,.gallery-photo:nth-child(2) img{height:320px}.welcome:before{inset:14px}
+}

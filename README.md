@@ -8,7 +8,7 @@ Se conserva el WhatsApp existente. La colección se encuentra en `coleccion/inde
 
 Planes: prestaciones de `atelier/sistema/planes.json`. Precios en pesos chilenos: Clásica $40.000 CLP, Platino $55.000 CLP y Gold $70.000 CLP, confirmados por el propietario.
 
-Solo se incluyen recursos de demostración; no hay datos de clientes. Las tarjetas enlazan a la colección integrada, con ocho diseños y un único botón Ver demo por tarjeta. Ver `ATRIBUCIONES.md`.
+Solo se incluyen recursos de demostración; no hay datos de clientes. Las tarjetas enlazan a la colección integrada, con dieciséis diseños y un único botón Ver demo por tarjeta. Ver `ATRIBUCIONES.md`.
 
 Las fuentes del sistema usan Baskerville/Georgia y Futura/Arial como alternativas. El logotipo usa trazados y conserva su apariencia en cualquier dispositivo.
 
@@ -23,3 +23,5 @@ Consultar [PUBLICAR-Y-SEO.md](PUBLICAR-Y-SEO.md). Incluye la configuración de G
 Para regenerar la colección desde el workspace completo: `npm run coleccion:web`. Publicar todo `web/` en un único repositorio/proyecto; no requiere `VISOR_URL`.
 
 El adelanto de la portada utiliza cinco capturas de teléfono proporcionadas por el propietario, en `assets/disenos/`, optimizadas en WebP (aproximadamente 290 KB en total). Los teléfonos y los dos enlaces de la sección abren `coleccion/index.html`; no hay demos interactivas incrustadas en la portada. En móvil, la fila se recorre deslizando y sus enlaces también son accesibles por teclado, sin JavaScript. Las capturas 2 y 6 representan Gaceta; se muestra una sola vez.
+
+El hero utiliza el video proporcionado por el propietario, optimizado en `assets/video/invitaciones-hero.mp4` (960 × 1200, sin audio), con un fotograma de respaldo WebP. Se reproduce automáticamente en bucle, inline y sin controles. El MP4 original no tiene canal alfa: su fondo blanco se integra visualmente con el papel mediante CSS. La reproducción depende de las políticas de autoplay del navegador; si se bloquea, se conserva el póster y se reintenta al primer gesto o al regresar a la página. El video decorativo no recibe foco ni bloquea los botones del hero. Las animaciones de entrada siguen respetando movimiento reducido; el video mantiene el bucle solicitado por el propietario.

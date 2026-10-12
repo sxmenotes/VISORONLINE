@@ -28,12 +28,12 @@ test('preview: noindex y sin URLs en el sitemap', async () => {
 test('bloquea dominio inválido', async () => {
  await assert.rejects(build({env:{...env,SITE_URL:'https://example.com/path'},out:await directory()}));
 });
-test('colección integrada: canonical, ocho demos locales y muestras noindex', async () => {
+test('colección integrada: canonical, dieciséis demos locales y muestras noindex', async () => {
  const out=await directory();await build({env,out});
  const html=await readFile(join(out,'coleccion/index.html'),'utf8');
  assert.match(html,/rel="canonical" href="https:\/\/example.com\/coleccion\/"/);
  const catalog=[...html.matchAll(/class="design-card" id="diseno-([^"]+)"/g)].map(match=>({id:match[1]}));
- assert.equal(catalog.length,8);
+ assert.equal(catalog.length,16);
  for(const design of catalog) for(const page of ['index.html','vista.html']) {
   const demo=await readFile(join(out,'coleccion/disenos',design.id,page),'utf8');
   assert.match(demo,/name="robots" content="noindex, follow"/);

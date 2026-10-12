@@ -3,7 +3,7 @@
  if(!form)return;
  const names=['nombre1','nombre2'];
  const plans={clasica:'Clásica · $40.000 CLP',platino:'Platino · $55.000 CLP',gold:'Gold · $70.000 CLP'};
- const designs={editorial:'Editorial',nocturno:'Nocturno',mediterraneo:'Mediterráneo',albor:'Albor',vanguardia:'Vanguardia',gaceta:'Gaceta',seda:'Seda',prisma:'Prisma'};
+ const designs={editorial:'Editorial',nocturno:'Nocturno',mediterraneo:'Mediterráneo',albor:'Albor',vanguardia:'Vanguardia',gaceta:'Gaceta',seda:'Seda',prisma:'Prisma',aurea:'Áurea',brisa:'Brisa',verbena:'Verbena',cinema:'Cinema',atlas:'Atlas',mosaico:'Mosaico',epistola:'Epístola',album:'Álbum'};
  const field=name=>form.elements.namedItem(name);
  function select(name,value,allowed){if(Object.hasOwn(allowed,value))field(name).value=value;}
  const params=new URLSearchParams(location.search);

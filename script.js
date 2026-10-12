@@ -9,6 +9,20 @@ navigation.addEventListener('click',event=>{if(event.target.closest('a'))setMenu
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){setMenu(false);menu.focus();}});
 const mobile=matchMedia('(max-width:700px)');mobile.addEventListener('change',()=>setMenu(false));
 
+// Decoración en bucle, sin controles ni interacción. Los navegadores pueden
+// bloquear autoplay; reintentamos al volver a la página o al primer gesto.
+const heroVideo=document.querySelector('.hero-video');
+if(heroVideo){
+ heroVideo.muted=true;
+ heroVideo.defaultMuted=true;
+ const playHero=()=>{if(!document.hidden&&heroVideo.paused)heroVideo.play().catch(()=>{});};
+ playHero();
+ window.addEventListener('pageshow',playHero);
+ document.addEventListener('visibilitychange',playHero);
+ document.addEventListener('pointerdown',playHero,{once:true,passive:true});
+ document.addEventListener('keydown',playHero,{once:true});
+}
+
 // All content starts visible. If GSAP or ScrollTrigger cannot load, nothing is hidden.
 if(window.gsap&&window.ScrollTrigger){
  gsap.registerPlugin(ScrollTrigger);

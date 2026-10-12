@@ -1,0 +1,59 @@
+:root{--paper:#17191b;--ink:#f6eddb;--green:#ebd3a0;--muted:#c5bba9;--line:#8d7d60;--surface:#222528;--button-ink:#17191b;--envelope:#42413b;--serif:'Bodoni Moda',Georgia,serif;--sans:'Manrope',Arial,sans-serif}
+
+/* Shared components inherit this design's palette; commercial modules remain controlled by the renderer. */
+body{background:var(--paper);color:var(--ink)}
+h1,h2,h3{overflow-wrap:anywhere}h2 em,.hero h1 em{color:var(--green)}
+header{border-color:var(--line)}.hero-message,.discover,.section-heading>p,.timeline article>p:not(.time),.section-description,.demo-label,.form-note,.rsvp>div>p:not(.eyebrow),.recommendation-description{color:var(--muted)}
+.button{background:var(--green);border-color:var(--green);color:var(--button-ink)}.button:hover{background:var(--ink);color:var(--paper)}.text-button{color:var(--green);border-color:var(--line)}
+.day,.intro,.gifts,.gallery,.faq{background:var(--paper)}.venues,.music-section,.recommendations,.rsvp,.social-section{background:var(--surface)}
+.timeline,.timeline article+article,.gift-card,.recommendation-card,.faq details,.travel-tip{border-color:var(--line)}.event-number{background:var(--paper);color:var(--green)}
+.venue-card,.venue-card:nth-child(2),.venue-card:nth-child(3){background:var(--paper);color:var(--ink);border:1px solid var(--line);outline:none}
+.venue-card p,.venue-card .venue-time,.guest-details p,.guest-details article>span{color:var(--muted)}.venue-card h3 em{color:var(--green)}
+.light,.venue-card .light{background:var(--green);color:var(--button-ink);border-color:var(--green)}
+.gift-card{background:var(--surface)}.gift-card dl>div{border-color:var(--line)}.gift-card .demo-warning,.recommendation-type,.recommendation-tag{color:var(--muted)}
+.gallery-photo{color:var(--ink)}.playlist-panel{background:var(--green);color:var(--button-ink);outline:none}.playlist-panel>p:not(.eyebrow){color:inherit}
+input:not([type=radio]),textarea,select{background:var(--paper);color:var(--ink);border-color:var(--line)}#form-status{background:var(--paper);color:var(--ink)}
+footer{background:var(--paper);color:var(--ink);border-color:var(--line)}footer small,footer>div{color:var(--muted)}
+.music-toggle{background:var(--paper);color:var(--ink);border-color:var(--line)}.music-toggle[aria-pressed=true]{background:var(--green);color:var(--button-ink)}
+dialog{background:var(--paper);color:var(--ink)}.close-photo{background:var(--paper);color:var(--ink)}
+.welcome{background:var(--paper);color:var(--ink)}.welcome h1 em,.welcome-signature span{color:var(--green)}.welcome:before{border-color:var(--line)}.welcome-intro,.welcome-signature,.open-hint{color:var(--muted)}.open-label{color:var(--ink);border-color:var(--line)}.envelope-letter{background:var(--paper);color:var(--ink)}.envelope-seal{background:var(--green);color:var(--button-ink)}
+.envelope-back,.envelope-front,.envelope-front:after,.envelope-flap{background:var(--envelope)}.letter-names i{color:var(--green)}
+@media(max-width:740px){.hero h1{font-size:clamp(60px,17vw,100px);overflow-wrap:anywhere}.hero-copy{min-width:0}.countdown{gap:12px}.countdown div{min-width:45px}.countdown strong{font-size:40px}.section-heading{flex-wrap:wrap}.timeline,.venue-grid{grid-template-columns:1fr}.timeline article+article{border-left:0}.hero-art{max-width:100%}}
+
+/* ÁUREA · arquitectura art déco y ceremonia de gala. */
+header{max-width:1440px;height:88px;border-bottom:3px double var(--line)}
+.monogram{color:var(--green);letter-spacing:1px}
+.hero{max-width:1380px;min-height:0;grid-template-columns:1.05fr 1fr;gap:50px;padding:48px 5% 64px;align-items:center}
+.hero-copy{padding:46px 24px;border:1px solid var(--line);outline:1px solid var(--line);outline-offset:-10px;position:relative}
+.hero-copy:before{content:'◇';display:block;color:var(--green);font:42px/1 var(--serif);margin-bottom:28px}
+.hero .eyebrow{letter-spacing:3px;font-size:10px;color:var(--green)}
+.hero h1{font-size:clamp(68px,7.5vw,112px);letter-spacing:-3px;line-height:1.05;margin:28px 0;color:var(--green)}
+.hero h1 em{font-size:.5em}.hero-rule{background:var(--line);width:70%;height:3px;border-top:1px solid var(--green);border-bottom:1px solid var(--green)}
+.hero-announcement{font-size:27px}.hero-message{font-size:14px;max-width:390px;margin:15px auto 24px}
+.hero-date{font-size:12px;letter-spacing:2px}.hero-location{font-size:11px}
+.hero .button{letter-spacing:1px;border-radius:0}.discover{font-size:12px}
+.hero-art{min-height:640px;margin:0;align-self:stretch;border:1px solid var(--line);padding:12px;background:var(--surface)}
+.hero-art img{inset:12px;width:calc(100% - 24px);height:calc(100% - 24px);filter:grayscale(1)}
+.photo-shade{inset:12px;background:linear-gradient(0deg,#111c,transparent 60%)}
+.photo-frame{inset:27px;border-color:#ebd3a080}.photo-caption{font-style:italic;font-size:clamp(36px,4vw,58px);left:40px;right:40px;bottom:65px;color:#fff4da}
+.photo-top,.photo-bottom,.seal{display:none}
+.section{border-top:1px solid var(--line)}
+h2{font-weight:400;line-height:1.15}.section-heading>p{max-width:260px}
+.countdown{border-block:3px double var(--line);max-width:650px;padding:24px 0}.countdown strong{color:var(--green)}
+.timeline{gap:30px;border-top:0}.timeline article,.timeline article+article{border:0;border-top:3px double var(--line);padding:30px 0 0}
+.event-number{position:static;display:block;padding:0;margin-bottom:16px;font-size:24px;color:var(--green);background:none}
+.venue-card:nth-child(n){outline:1px solid var(--line);outline-offset:-12px;text-align:center;align-items:center;padding:45px 26px}
+.venue-card h3{font-size:34px}.gallery-photo img,.gallery-photo:nth-child(2) img{filter:grayscale(1);height:390px;padding:9px;border:1px solid var(--line)}
+.gift-card{border:3px double var(--line)}.playlist-panel{background:var(--paper);color:var(--green);border:3px double var(--line)}
+.welcome:before{border:3px double var(--line);inset:24px}.welcome h1{letter-spacing:-1px}.welcome h1 em{color:var(--green)}
+.envelope-seal{border-radius:0;outline-color:var(--line)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline-color:var(--green)}
+@media(max-width:740px){
+ header{height:76px}.hero{display:flex;flex-direction:column;gap:24px;padding:24px 5% 38px}
+ .hero-copy{padding:36px 23px;width:100%}.hero-copy:before{font-size:30px;margin-bottom:20px}
+ .hero h1{font-size:clamp(54px,15vw,90px);letter-spacing:-2px;line-height:1.06;margin:23px 0}
+ .hero .eyebrow{font-size:9px;letter-spacing:1.6px}.hero-date{font-size:11px;letter-spacing:1.5px}
+ .hero-art{width:100%;min-height:420px;align-self:auto}.photo-caption{left:32px;right:32px;font-size:38px;bottom:48px}
+ .section{padding:60px 7%}.countdown{gap:8px}.countdown div{min-width:42px}.countdown strong{font-size:36px}.countdown span{font-size:8px}
+ .gallery-photo img,.gallery-photo:nth-child(2) img{height:340px}.welcome:before{inset:16px}
+}

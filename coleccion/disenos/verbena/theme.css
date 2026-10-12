@@ -1,0 +1,51 @@
+:root{--paper:#ffe9ed;--ink:#a32140;--green:#a32140;--muted:#7e3d4a;--line:#c56b7e;--surface:#fff8e9;--button-ink:#fff8e9;--envelope:#ffafbe;--serif:'DM Serif Display',Georgia,serif;--sans:'Outfit',Arial,sans-serif}
+
+/* Shared components inherit this design's palette; commercial modules remain controlled by the renderer. */
+body{background:var(--paper);color:var(--ink)}
+h1,h2,h3{overflow-wrap:anywhere}h2 em,.hero h1 em{color:var(--green)}
+header{border-color:var(--line)}.hero-message,.discover,.section-heading>p,.timeline article>p:not(.time),.section-description,.demo-label,.form-note,.rsvp>div>p:not(.eyebrow),.recommendation-description{color:var(--muted)}
+.button{background:var(--green);border-color:var(--green);color:var(--button-ink)}.button:hover{background:var(--ink);color:var(--paper)}.text-button{color:var(--green);border-color:var(--line)}
+.day,.intro,.gifts,.gallery,.faq{background:var(--paper)}.venues,.music-section,.recommendations,.rsvp,.social-section{background:var(--surface)}
+.timeline,.timeline article+article,.gift-card,.recommendation-card,.faq details,.travel-tip{border-color:var(--line)}.event-number{background:var(--paper);color:var(--green)}
+.venue-card,.venue-card:nth-child(2),.venue-card:nth-child(3){background:var(--paper);color:var(--ink);border:1px solid var(--line);outline:none}
+.venue-card p,.venue-card .venue-time,.guest-details p,.guest-details article>span{color:var(--muted)}.venue-card h3 em{color:var(--green)}
+.light,.venue-card .light{background:var(--green);color:var(--button-ink);border-color:var(--green)}
+.gift-card{background:var(--surface)}.gift-card dl>div{border-color:var(--line)}.gift-card .demo-warning,.recommendation-type,.recommendation-tag{color:var(--muted)}
+.gallery-photo{color:var(--ink)}.playlist-panel{background:var(--green);color:var(--button-ink);outline:none}.playlist-panel>p:not(.eyebrow){color:inherit}
+input:not([type=radio]),textarea,select{background:var(--paper);color:var(--ink);border-color:var(--line)}#form-status{background:var(--paper);color:var(--ink)}
+footer{background:var(--paper);color:var(--ink);border-color:var(--line)}footer small,footer>div{color:var(--muted)}
+.music-toggle{background:var(--paper);color:var(--ink);border-color:var(--line)}.music-toggle[aria-pressed=true]{background:var(--green);color:var(--button-ink)}
+dialog{background:var(--paper);color:var(--ink)}.close-photo{background:var(--paper);color:var(--ink)}
+.welcome{background:var(--paper);color:var(--ink)}.welcome h1 em,.welcome-signature span{color:var(--green)}.welcome:before{border-color:var(--line)}.welcome-intro,.welcome-signature,.open-hint{color:var(--muted)}.open-label{color:var(--ink);border-color:var(--line)}.envelope-letter{background:var(--paper);color:var(--ink)}.envelope-seal{background:var(--green);color:var(--button-ink)}
+.envelope-back,.envelope-front,.envelope-front:after,.envelope-flap{background:var(--envelope)}.letter-names i{color:var(--green)}
+@media(max-width:740px){.hero h1{font-size:clamp(60px,17vw,100px);overflow-wrap:anywhere}.hero-copy{min-width:0}.countdown{gap:12px}.countdown div{min-width:45px}.countdown strong{font-size:40px}.section-heading{flex-wrap:wrap}.timeline,.venue-grid{grid-template-columns:1fr}.timeline article+article{border-left:0}.hero-art{max-width:100%}}
+
+/* VERBENA · cuadros de picnic, rojo cereza y un retrato enmarcado. */
+header{height:84px;border-bottom:2px solid var(--green);max-width:none}.monogram{font-weight:400}
+.hero{max-width:none;min-height:0;grid-template-columns:1.1fr 1fr;gap:40px;padding:52px 6%;align-items:center;border-bottom:2px solid var(--green);position:relative}
+.hero:before{content:'';position:absolute;inset:0 0 auto;height:16px;background:repeating-conic-gradient(var(--green) 0% 25%,var(--paper) 0% 50%) 0 0/32px 32px;pointer-events:none}
+.hero-copy{text-align:left;padding:25px 0}.hero .eyebrow{font-size:11px;letter-spacing:1.5px}
+.hero h1{font-size:clamp(75px,8.8vw,135px);line-height:.96;letter-spacing:-4px;margin:28px 0}.hero h1 em{font-size:.65em;font-style:italic}
+.hero-rule{display:none}.hero-announcement{font:32px var(--serif);font-style:normal}.hero-message{font-size:15px;margin:16px 0 25px;max-width:450px}
+.hero-date{font-size:14px;letter-spacing:1px}.hero-location{font-size:11px;letter-spacing:1px}
+.hero .button{border-radius:100px;box-shadow:4px 4px 0 var(--line);padding:15px 26px}.discover{margin-top:24px}
+.hero-art{margin:24px 12px;min-height:620px;width:calc(100% - 24px);border:14px solid var(--surface);border-radius:48% 48% 8px 8px;outline:2px solid var(--green);outline-offset:7px;background:var(--surface);transform:rotate(3deg)}
+.hero-art img{filter:saturate(.8)}.photo-shade{background:linear-gradient(0deg,#5c163e90,transparent 65%)}
+.photo-frame,.photo-top,.photo-bottom,.seal{display:none}.photo-caption{font-size:42px;bottom:35px;left:24px;right:24px;text-align:center;font-style:italic;color:var(--surface)}
+.section{border-top:1px solid var(--line)}h2{letter-spacing:-1.5px}h2 em{font-style:italic}
+.countdown{gap:18px}.countdown div{min-width:90px;padding:20px 12px;background:var(--surface);border:1px solid var(--green);border-radius:45% 45% 8px 8px}.countdown b{display:none}.countdown strong{font-size:52px}
+.timeline{border:0;gap:25px}.timeline article,.timeline article+article{border:1px solid var(--line);padding:28px;background:var(--surface);border-radius:20px}
+.event-number{position:static;display:inline-block;border-radius:50%;background:var(--green);color:var(--button-ink);padding:8px 12px;margin-bottom:20px}
+.venue-card:nth-child(n){background:var(--paper);border:2px solid var(--green);border-radius:24px;box-shadow:6px 6px 0 var(--line);padding:34px 26px}.venue-card h3{font-size:33px}
+.gallery-photo{padding:12px;background:var(--surface);border:1px solid var(--line);transform:rotate(-2deg)}.gallery-photo:nth-child(2){transform:rotate(2deg)}
+.gallery-photo img,.gallery-photo:nth-child(2) img{height:330px}.gallery-photo span{display:block;padding:10px 0 3px;font-style:italic}
+.gift-card{border:2px solid var(--line);border-radius:22px}.playlist-panel{border-radius:35px}.rsvp .button{border-radius:100px}
+.welcome:before{inset:20px;border:2px dashed var(--green);outline:1px solid var(--line);outline-offset:7px}
+.welcome h1{letter-spacing:-1px}.envelope-seal{outline-color:var(--green);outline-style:dashed}.music-toggle{border-radius:100px}
+@media(max-width:740px){
+ header{height:76px}.hero{display:flex;flex-direction:column;padding:45px 7% 45px;gap:10px}.hero-copy{text-align:center;padding:0;max-width:100%}
+ .hero h1{font-size:clamp(60px,18vw,100px);letter-spacing:-2px;margin:26px 0}.hero .eyebrow{font-size:10px;letter-spacing:1.5px}.hero-announcement{font-size:29px}.hero-message{font-size:14px;margin:15px auto 23px}
+ .hero-date{font-size:12px}.hero-location{margin:10px 0 24px}.hero-art{width:calc(100% - 20px);min-height:380px;margin:28px 10px 8px;border-width:10px;outline-offset:5px;transform:rotate(2deg)}.photo-caption{font-size:32px;left:18px;right:18px;bottom:24px}
+ .section{padding:60px 7%}.countdown{gap:8px}.countdown div{min-width:0;flex:1;max-width:90px;padding:16px 5px}.countdown strong{font-size:35px}.countdown span{font-size:8px;letter-spacing:.5px}
+ .timeline article,.timeline article+article{padding:24px}.gallery-grid{gap:28px}.gallery-photo img,.gallery-photo:nth-child(2) img{height:320px}.gallery-photo{transform:none}.gallery-photo:nth-child(2){transform:none}
+}

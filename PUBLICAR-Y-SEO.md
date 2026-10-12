@@ -2,7 +2,7 @@
 
 ## Dominio y colección
 
-La web y su colección se publican juntas en **https://clickacepto.vercel.app**. La página adicional está en `/coleccion/`, con sus ocho demos y recursos locales. No requiere `VISOR_URL` ni otro proyecto de Vercel.
+La web y su colección se publican juntas en **https://clickacepto.vercel.app**. La página adicional está en `/coleccion/`, con sus dieciséis demos y recursos locales. No requiere `VISOR_URL` ni otro proyecto de Vercel.
 
 Para revisar sin servidor, abrir `coleccion/index.html`. Para regenerar las demos desde el workspace completo: `npm run coleccion:web`. Las fuentes están en `atelier/sistema/visor/` y `atelier/coleccion/`; no editar a mano la salida `web/coleccion`. El repositorio público solo necesita `web`: no depende del editor durante el deploy.
 

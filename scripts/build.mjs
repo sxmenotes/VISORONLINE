@@ -16,7 +16,7 @@ export async function build({ env = process.env, out = join(root, 'dist') } = {}
   if (env.VERCEL && !url) throw new Error('Falta SITE_URL o VERCEL_PROJECT_PRODUCTION_URL. Activa las variables de sistema de Vercel.');
   const indexable = Boolean(url) && (!env.VERCEL_ENV || env.VERCEL_ENV === 'production');
   const title = 'Invitaciones digitales de boda | Click! Acepto by Kintu';
-  const description = 'Invitaciones digitales de boda personalizadas. Exploren ocho diseños editoriales, elijan su plan y compartan su historia con Click! Acepto by Kintu.';
+  const description = 'Invitaciones digitales de boda personalizadas. Exploren dieciséis diseños editoriales, elijan su plan y compartan su historia con Click! Acepto by Kintu.';
   let html = await readFile(join(root, 'index.html'), 'utf8');
   html = html.replace(/<title>.*?<\/title>/s, `<title>${title}</title>`)
     .replace(/<meta\s+(?:name="(?:description|robots|twitter:[^"]+)"|property="og:[^"]+")[^>]*>/g, '')
@@ -58,7 +58,7 @@ export async function build({ env = process.env, out = join(root, 'dist') } = {}
   let collection = await readFile(join(root, 'coleccion/index.html'), 'utf8');
   collection = collection.replace(/<meta\s+(?:name="(?:description|robots)"|property="og:[^"]+")[^>]*>/g, '');
   const collectionTitle = 'Colección de invitaciones de boda | Click! Acepto';
-  const collectionDescription = 'Exploren ocho diseños de invitaciones digitales de boda. Encuentren su estilo y abran las demos completas de Click! Acepto.';
+  const collectionDescription = 'Exploren dieciséis diseños de invitaciones digitales de boda. Encuentren su estilo y abran las demos completas de Click! Acepto.';
   const collectionMeta = metadata.filter(tag => !tag.includes('application/ld+json')).map(tag => tag.replaceAll(title, collectionTitle).replaceAll(description, collectionDescription).replace(`href="${escape(url)}"`, `href="${escape(url)}coleccion/"`).replace(`property="og:url" content="${escape(url)}"`, `property="og:url" content="${escape(url)}coleccion/"`));
   collection = collection.replace(/<title>.*?<\/title>/s, `<title>${collectionTitle}</title>`).replace('</head>', collectionMeta.join('\n') + '</head>');
   await writeFile(join(out, 'coleccion/index.html'), collection);
